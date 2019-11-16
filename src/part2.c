@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
             exit(-1);
     }
 
-    int offsetSize = round(log(PAGE_FRAME_BYTES)/log(2));
+    int offsetSize = round(log(PAGE_FRAME_BYTES)/log(2)); // 128 = 2^7
     int numEntriesPhysical = PHY_MEM/PAGE_FRAME_BYTES; //7+1 for OS frame at beginning
     int numEntriesPageTable = VIRT_MEM/PAGE_FRAME_BYTES; //32
 

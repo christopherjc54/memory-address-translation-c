@@ -15,8 +15,7 @@ int main(int argc, char* argv[]) {
     unsigned long fileSize;
     unsigned long* memAccesses = readData(argv[1], &fileSize);
 
-    int pageTable[32];
-    void* frames[32];
+    int pageTable[7];
     pageTable[0] = 2;
     pageTable[1] = 4;
     pageTable[2] = 1;
@@ -24,6 +23,7 @@ int main(int argc, char* argv[]) {
     pageTable[4] = 3;
     pageTable[5] = 5;
     pageTable[6] = 6;
+    
     unsigned long pageNumber;
     unsigned long pageOffset;
     unsigned long physicalPageNumber;
